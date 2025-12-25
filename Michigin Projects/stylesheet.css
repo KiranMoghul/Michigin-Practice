@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quattrocento:wght@400;700&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    text-decoration: none;
+    /* border: 1px solid salmon; */
+}
+
+ol, ul {
+    list-style: none;
+}
+/* These above esets are from https://meyerweb.com/ */
+
+
+/* style */
+:root {
+    --fontHeading:"Quattrocento", serif; 
+    --fontBody:"Quattrocento Sans", sans-serif; 
+    
+    --textPrimary: #0F101A;
+    --textSecondary: #3A3C4D;
+    --textTertairy: #67697B;
+    --textDisabled: #A0A1AD;
+
+    --backGround01: #ffffff;
+    --backGround02: #f0f0fa;
+
+    --borderLight:#E4E4F2;
+    --borderDark:#BEBED4;
+
+    --primary800: #0C4B7A;
+    --primary700: #0067A2;
+    --primary600: #0088CC;
+    --primary500: #18A5EC;
+    --primary400: #85DCFF;
+    --primary300: #B8E7FF;
+    --primary200: #E0F1FE;
+    --primary100: #F0F9FF;
+
+    --space4px: 4px;
+    --space8px: 8px;
+    --space12px: 12px;
+    --space16px: 16px;
+    --space20px: 20px;
+    --space24px: 24px;
+    --space32px: 32px;
+    --space40px: 40px;
+}
+
+body {
+    line-height: 1;
+    background-color: var(--backGround02);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fontHeading) !important;
+    font-weight: bold;
+    color: var(--textPrimary);
+    line-height: 100%;
+}
+
+a, ul, ol, li, blockquote {
+    font-family: var(--fontBody) !important;
+    color: var(--textTertairy);
+}
+
+p, input {
+    font-family: var(--fontBody);
+    color: var(--textTertairy);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+}
+
+i {
+    font-size: 24px;
+    color: var(--textPrimary);
+}
+
+h1 {
+    font-size: 44px;
+    line-height: 140%;
+}
+h2 {
+    font-size: 36px;
+    line-height: 140%;
+}
+h3 {
+    font-size: 24px;
+    line-height: 140%;
+}
+h4 {
+    font-size: 20px;
+    line-height: 140%;
+}
+
+
+.buttonPrimary {
+    background-color: var(--primary500);
+    border: 0px;
+    font-family: var(--fontBody);
+    font-weight: bolder;
+    font-size: var(--space16px);
+    height: 32px;
+    padding: 0px 12px;
+    border-radius: var(--space4px);
+    color: var(--primary100);
+}
+.buttonSecondary {
+    background-color: var(--primary200);
+    border: 0px;
+    font-family: var(--fontBody);
+    font-weight: bolder;
+    font-size: var(--space16px);
+    height: 32px;
+    padding: 0px 12px;
+    border-radius: var(--space4px);
+    color: var(--primary500);
+    border: 1px solid var(--primary600);
+}
+
+/* 01 */
+/* Hero Section  */
+.heroSection {
+    display: flex;
+    margin: 100px;
+    gap: 20px;
+    align-items: center;
+}
+
+.heroSectionLeft {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 16px;
+}
+
+.heroSectionFeatures {
+    display: flex;
+    gap: 24px;
+}
+.heroSectionFeatureItem {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.heroSectionFeatureItem i {
+    color: var(--primary500);
+    /* Width and height were not working on icons */
+    font-size: 20px;
+}
+
+.heroSectionRight {
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+.heroSectionRight img{
+    /* Resizing while maintaining the aspect ratio */
+    max-width: 100%; 
+    height: auto;
+}
+
+
+/* 02 */
+.portfolioContent {
+    margin: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+header {
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+    background-color: var(--backGround01);
+    border-radius: 16px;
+    gap: 24px;
+}
+header img {
+    border-radius: 100%;
+    border: 4px solid var(--borderLight);
+    box-shadow: 0px 2px 8px #dadada;
+}
+.aboutMe {
+    padding: 24px;
+    background-color: var(--backGround01);
+    border-radius: 16px;
+}
+
+.myWork {
+    padding: 24px;
+    background-color: var(--backGround01);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.myWork .projects {
+    display: grid;
+    grid-template-columns:48% 48% ;
+    justify-content: space-between;
+}
+
+.myWork img {
+    max-width: 100%; 
+    height: auto;
+    outline: var(--borderLight) 4px solid;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px #dadada;
+}
+
+.myWork .project {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mySkills {
+    padding: 24px;
+    background-color: var(--backGround01);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mySkills ol {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+footer {
+    padding: 24px;
+    background-color: var(--backGround01);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns:300px 120px ;
+    gap: 12px;
+    justify-content: end;
+}
+
+footer input {
+    border: 1px solid var(--borderLight);
+    padding: 0px 12px;
+    height: 32px;
+    border-radius: 4px;
+}
+
+/* 03 */
+.topNav {
+    display: flex;
+    background-color: var(--backGround01);
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--primary300);
+}
+
+.topNavLinks {
+    display: flex;
+    gap: var(--space16px);
+    align-items: center;
+}
+.topNav a {
+    color: var(--textPrimary);
+    font-family: var(--fontBody);
+    font-weight: bolder;
+}
+.topNav a:hover {
+    color: var(--primary800);
+    text-decoration: underline 1.5px solid;
+    text-underline-offset: 2px;
+}
+
+.topNav a.active {
+    background-color: var(--primary300);
+    padding: var(--space4px);
+    border-radius: var(--space4px);
+}
+
+.favMovies {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space24px);
+    gap: var(--space24px);
+    width: 600px;
+    margin: auto;
+}
+
+.favMovies h1 {
+    text-align: center;
+}
+
+.favMovies ol {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.favMovies .listCard {
+    display: flex;
+    gap: var(--space16px);
+    background-color: var(--backGround02);
+    padding: var(--space16px);
+    border-radius: var(--space16px);
+    gap: 24px;
+
+    background-color: var(--backGround01);
+}
+
+.favMovies .listCard .content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.favMovies .listCard .content p {
+    height: 100%;
+}
+
+.favMovies .listCard img {
+    width: 200px;
+    border-radius: var(--space8px);
+}
+
+
+
+.Experiment02 div {
+    width: 30%;
+    height: 200px;
+    background-color: #85DCFF;
+
+    display: table;
+    overflow: auto;
+}
+
+
+/* 04 - Walk in a Park */
+
+.topNavItems {
+    display: flex;
+    gap: 20px;
+}
+
+.Neighbourhood {
+    background-color: var(--backGround02);
+    padding: 32px;
+    text-align: center;
+    margin: auto;
+}
+
+.Neighbourhood .gallery {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    justify-content: space-around;
+    gap: 16px;
+}
+
+.Neighbourhood .gallery .imgContainer {
+    flex: 1;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+}
+
+
+.Neighbourhood .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border: 1px solid var(--borderDark); */
+    /* border-radius: 24px; */
+    /* box-sizing: border-box; */
+    display: block;
+}
+
+.footer {
+    background-color: var(--primary800);
+    text-align: center;
+    padding: 12px;
+}
+
+.footer p {
+    color: var(--primary100);
+}
+
+/* Skip to Content Link */
+.skipContent {
+    display: flex;
+    background-color: var(--primary600);
+    color: var(--backGround01);
+    padding: 8px;
+    width: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* index Experiments  */
+.Experiment {
+    background-color: var(--primary600);
+    color: var(--primary100);
+    /* display: inline-block; */
+}
+
+.Experiment span {
+    background-color: brown;
+    height: 100px;
+    display: inline-block;
+}
+
+.Experiment div {
+    background-color: blueviolet;
+    width: 45%;
+    height: 100px;
+    display: inline-block;
+}
+
+.Experiment p {
+    background-color: rgb(255, 6, 189);
+    width: 45%;
+    height: 100px;
+}
+
+.Experiment02 {
+    background-color: green;
+    color: var(--primary100);
+}
